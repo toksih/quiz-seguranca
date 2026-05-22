@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Missão de Segurança | Resultado</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/resultado.css" />
+</head>
+<body data-scene="result">
+  <main class="page page-result">
+    <section class="result-layout panel glass" id="resultCard">
+      <div class="result-head">
+        <span class="chip chip-gold" id="resultBadge">RESULTADO</span>
+        <div class="result-state" id="resultGlow">★</div>
+      </div>
+
+      <div class="result-grid">
+        <div class="luna-column">
+          <div class="stage-label"> VEREDITO FINAL</div>
+          <div class="luna-wrap luna-wrap-large" id="resultAvatarWrap" data-mood="normal">
+            <div class="luna-orb"></div>
+            <img src="./assets/images/reactions/aproved.png" alt="Luna, guia do treinamento" class="luna-image" id="resultAvatar" />
+            <span class="mood-pill" id="statStatus">-</span>
+          </div>
+          <div class="speech-bubble speech-bubble-large">
+            <p class="speech-title" id="resultTitle">RESULTADO</p>
+            <p class="speech-text" id="resultMessage"></p>
+            <p class="speech-note" id="resultHint"></p>
+          </div>
+        </div>
+
+        <div class="score-column">
+          <div class="score-orb">
+            <strong id="xpFinal">0</strong>
+            <span>XP FINAL</span>
+          </div>
+
+          <div class="result-stats">
+            <div class="stat-card">
+              <span>CLASSIFICAÇÃO</span>
+              <strong id="statLevel">-</strong>
+            </div>
+            <div class="stat-card">
+              <span>STATUS</span>
+              <strong id="statStatusMirror">-</strong>
+            </div>
+          </div>
+
+          <button id="actionButton" class="btn btn-primary">FINALIZAR</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/storage.js"></script>
+  <script src="./scripts/resultado.js"></script>
+</body>
+</html>

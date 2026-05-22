@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Missão de Segurança | Início</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/home.css" />
+</head>
+<body data-scene="home">
+  <main class="page page-home">
+    <section class="home-hero panel glass">
+      <div class="chip-row">
+        <span class="chip chip-gold">TREINAMENTO INTERATIVO</span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">SISTEMA DA MISSÃO</p>
+        <h1>Prepare-se para a operação.</h1>
+        <p class="lead">
+          Certifique-se de ter assistido completo o vídeo de Apresentação da unidade. <br>
+          Entre com seu nome e comece a jornada guiada pela Luna. <br>
+        </p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-pill">
+          <strong>10 &#128203;</strong>
+          <span>perguntas</span>
+        </div>
+        <div class="stat-pill">
+          <strong>+10 &#11088;</strong>
+          <span>XP por acerto</span>
+        </div>
+        <div class="stat-pill">
+          <strong>80 &#9989;</strong>
+          <span>XP para aprovar</span>
+        </div>
+      </div>
+
+      <form class="start-form" id="startForm" autocomplete="off" novalidate>
+        <label class="field">
+          <span>Nome do operador</span>
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Digite seu nome"
+            autocomplete="name"
+            maxlength="30"
+            inputmode="text"
+          />
+        </label>
+
+        <button type="submit" class="btn btn-primary">
+          INICIAR MISSÃO
+        </button>
+
+        <p class="form-hint" id="homeHint" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <aside class="home-side stage">
+      <div class="stage-label">LUNA SUA AMIGA E AUXILIADORA</div>
+
+      <div class="luna-wrap" data-mood="thinking">
+        <div class="luna-orb"></div>
+        <img src="./assets/images/reactions/luna.png" alt="Luna, a guia do treinamento" class="luna-image" />
+        <span class="mood-pill">Pronta para ajudar</span>
+      </div>
+
+      <div class="speech-bubble">
+        <p class="speech-title">Bem-vindo(a) ao quiz da BAT</p>
+        <p class="speech-text">
+          Eu vou te acompanhar do início ao fim. Responda com calma e conquiste sua aprovação para entrada segura em nosso COD.
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/storage.js"></script>
+  <script src="./scripts/home.js"></script>
+</body>
+</html>

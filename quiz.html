@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Missão de Segurança | Quiz</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/quiz.css" />
+</head>
+<body data-scene="quiz">
+  <main class="page page-quiz">
+    <header class="quiz-hud panel glass">
+      <div class="hud-copy">
+        <span class="chip chip-gold" id="chapterTag">MISSÃO</span>
+        <h1 id="questionNumber">Pergunta 1/10</h1>
+      </div>
+
+      <div class="hud-xp">
+        <span>XP &#11088; </span>
+        <strong id="xpValue">0</strong>
+      </div>
+    </header>
+
+    <section class="progress-card panel glass">
+      <div class="progress-head">
+        <span>PROGRESSO DA MISSÃO</span>
+        <strong id="progressPercent">0%</strong>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </section>
+
+    <section class="guide-strip panel glass">
+      <div class="luna-wrap luna-wrap-compact" id="lunaMood" data-mood="normal">
+        <div class="luna-orb"></div>
+        <img src="assets/images/reactions/luna.png" alt="Luna, guia do treinamento" class="luna-image" id="guideAvatar" />
+        <span class="mood-pill">Luna</span>
+      </div>
+
+      <div class="speech-bubble guide-bubble">
+        <p class="speech-title" id="helloText">Olá!</p>
+        <p class="speech-text" id="guideText"></p>
+      </div>
+    </section>
+
+    <section class="question-card panel glass" id="quizCard">
+      <p class="question-label">MISSÃO ATIVA</p>
+      <h2 class="question-text" id="questionText"></h2>
+
+      <div class="options-grid" id="optionsContainer" aria-live="polite"></div>
+
+      <div class="feedback-box" id="feedback" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./assets/audio/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/storage.js"></script>
+  <script src="./data/perguntas.js"></script>
+  <script src="./scripts/quiz.js"></script>
+</body>
+</html>

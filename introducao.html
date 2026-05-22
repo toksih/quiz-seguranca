@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Missão de Segurança | Introdução</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/introducao.css" />
+</head>
+<body data-scene="intro">
+  <main class="page page-intro">
+    <section class="intro-layout panel glass">
+      <div class="intro-top">
+        <h1 id="welcomeTitle">BEM-VINDO(A)</h1>
+        <p class="lead intro-lead">
+          A Luna vai explicar a missão antes do quiz. Leia tudo como se fosse um mapa de combate.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+        <div class="luna-column">
+          <div class="luna-wrap luna-wrap-large" data-mood="guide">
+            <div class="luna-orb"></div>
+            <img src="assets/images/reactions/luna.png" alt="Luna, a guia do treinamento" class="luna-image" id="introAvatar" />
+            <span class="mood-pill">Luna</span>
+          </div>
+        </div>
+
+        <div class="dialog-column">
+          <div class="speech-bubble speech-bubble-large">
+            <p class="speech-title" id="introTag">MISSÃO DE SEGURANÇA</p>
+            <div id="lunaSpeech" class="typed-text" aria-live="polite"></div>
+          </div>
+
+          <div class="mission-grid">
+            <div class="mission-card">
+              <strong>10 &#128203;</strong>
+              <span>perguntas</span>
+            </div>
+            <div class="mission-card">
+              <strong>1 &#128070;</strong>
+              <span>tentativa por etapa</span>
+            </div>
+            <div class="mission-card">
+              <strong>80 XP &#128142;</strong>
+              <span>mínimo de aprovação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-actions">
+        <button id="nextButton" class="btn btn-primary">COMEÇAR</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/storage.js"></script>
+  <script src="./scripts/introducao.js"></script>
+</body>
+</html>
+
+
+
+
