@@ -89,12 +89,12 @@ const perguntas = [
     guia: "Lugar de comer também faz parte da regra de segurança e organização.",
     pergunta: "Na unidade, você deve:",
     alternativas: [
-      "Comer somente no local permitido",
+      "Comer enquanto caminha",
       "Levar alimento para áreas restritas",
       "Comer em qualquer setor",
-      "Comer enquanto caminha"
+      "Comer somente no local permitido"
     ],
-    correta: 0,
+    correta: 3,
     feedbackCerto: "Perfeito! Alimentação só no local permitido.",
     feedbackErrado: "Quase! O correto é comer somente no local permitido.",
     avatar: "./assets/images/reactions/luna7.png",
@@ -140,12 +140,12 @@ const perguntas = [
     guia: "Corrimão e limite de velocidade são parte da rotina segura.",
     pergunta: "Em escadas e áreas internas, qual prática está correta?",
     alternativas: [
-      "Segurar o corrimão e respeitar a velocidade de até 20 km/h",
       "Descer olhando o celular",
       "Subir sem usar o corrimão e correr",
-      "Acelerar para terminar antes"
+      "Acelerar para terminar antes",
+      "Segurar o corrimão e respeitar a velocidade de até 20 km/h"
     ],
-    correta: 0,
+    correta: 3,
     feedbackCerto: "Excelente! Usar o corrimão e respeitar até 20 km/h ajuda a evitar quedas e colisões.",
     feedbackErrado: "Não. O correto é usar o corrimão e respeitar a velocidade de até 20 km/h.",
     avatar: "./assets/images/reactions/luna4.png",
