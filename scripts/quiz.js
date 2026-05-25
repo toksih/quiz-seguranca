@@ -1,4 +1,3 @@
-
 const nome = pegarNome() || "COLABORADOR";
 if (!pegarNome()) {
   window.location.href = "index.html";
@@ -27,6 +26,7 @@ const lunaMood = document.getElementById("lunaMood");
 const guideAvatar = document.getElementById("guideAvatar");
 const quizCard = document.getElementById("quizCard");
 const bgMusic = document.getElementById("bgMusic");
+const nextButton = document.getElementById("nextButton");
 
 function startQuizMusic() {
   if (!bgMusic) return;
@@ -56,6 +56,7 @@ const questionThemes = [
 let currentQuestion = 0;
 let xp = 0;
 let locked = false;
+let answered = false;
 
 function applyTheme(index) {
   const theme = questionThemes[index] || questionThemes[questionThemes.length - 1];
@@ -148,6 +149,8 @@ function renderQuestion() {
 
   applyTheme(currentQuestion);
   locked = false;
+  answered = false;
+  nextButton.style.display = "none";
 
   const avatarPadrao = pergunta.avatar || "./assets/images/reactions/luna.png";
   setAvatar(
@@ -179,6 +182,7 @@ function renderQuestion() {
 function handleAnswer(selectedIndex) {
   if (locked) return;
   locked = true;
+  answered = true;
 
   const pergunta = perguntas[currentQuestion];
   const buttons = [...optionsContainer.querySelectorAll(".option-card")];
@@ -222,15 +226,20 @@ function handleAnswer(selectedIndex) {
   renderHud();
   appHelpers.flashElement(quizCard, "shimmer", 800);
 
-  window.setTimeout(() => {
-    currentQuestion += 1;
-    if (currentQuestion >= perguntas.length) {
-      concludeQuiz();
-      return;
-    }
-    renderQuestion();
-  }, 900);
+  nextButton.style.display = "block";
 }
+
+function goToNextQuestion() {
+  if (!answered) return;
+  currentQuestion += 1;
+  if (currentQuestion >= perguntas.length) {
+    concludeQuiz();
+    return;
+  }
+  renderQuestion();
+}
+
+nextButton.addEventListener("click", goToNextQuestion);
 
 function concludeQuiz() {
   marcarConcluido(xp >= 50);
