@@ -1,4 +1,3 @@
-
 .page-quiz{
   align-items:start;
   padding-top: calc(12px + var(--safe-top));
@@ -96,6 +95,22 @@
 .options-grid{
   display:grid;
   gap:10px;
+}
+
+.btn-next{
+  margin-top:8px;
+  animation: slideUp .35s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 740px){
